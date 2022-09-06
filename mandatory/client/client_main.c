@@ -6,7 +6,7 @@
 /*   By: minsukan <minsukan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:30:26 by minsukan          #+#    #+#             */
-/*   Updated: 2022/09/05 16:10:46 by minsukan         ###   ########.fr       */
+/*   Updated: 2022/09/06 19:14:44 by minsukan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	send_sig(int pid, char *str)
 				send_sig1(pid);
 			else
 				send_sig2(pid);
-			usleep(700);
+			usleep(1000);
 			j >>= 1;
 		}
 		if (str[i] == 0)
@@ -59,7 +59,7 @@ void	send_my_pid(int pid, int mypid)
 			send_sig1(pid);
 		else
 			send_sig2(pid);
-		usleep(500);
+		usleep(1000);
 		i >>= 1;
 	}
 }
